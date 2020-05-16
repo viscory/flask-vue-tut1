@@ -9,8 +9,12 @@ def index():
 
 @app.route('/about')
 def about():
-    return '<h1>Fai is an amateur programmer</h1>'
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     print("server is running on localhost")
-    app.run()
+    app.run(debug = True)
